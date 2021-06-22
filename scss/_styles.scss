@@ -25,7 +25,7 @@ body {
   &:before {
     z-index: 10001;
     line-height: 20px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     position: fixed;
     font-size: 20px;
@@ -71,6 +71,15 @@ body {
 a {
   text-decoration: none;
 }
+h1 {
+  background: #ef8080;
+  background: -webkit-linear-gradient(to left, #ef8080 0%, #f0145a 100%);
+  background: -moz-linear-gradient(to left, #ef8080 0%, #f0145a 100%);
+  background: linear-gradient(to left, #ef8080 0%, #f0145a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
 .intro {
   background: linear-gradient(
     42.01deg,
@@ -96,7 +105,7 @@ a {
   }
 }
 .logo {
-  background: url(../images/logo.svg);
+  background: url(../images/svg/logo.svg);
   width: 77.5px;
   height: 31px;
   background-size: cover;
@@ -115,12 +124,12 @@ a {
   display: flex;
   align-items: center;
   @include media-breakpoint-up(lg) {
-    background: url(../images/intro-bg.svg);
+    background: url(../images/svg/intro-bg.svg);
     width: 689px;
   }
   &:after {
     content: "";
-    background: url(../images/intro-p.svg) no-repeat;
+    background: url(../images/svg/intro-p.svg) no-repeat;
     position: absolute;
     width: 430px;
     height: 687px;
@@ -207,15 +216,21 @@ a {
 
 .subNav {
   padding: 0;
-  margin: 0;
+  margin: 0 0 80px;
   list-style: none;
   li {
     display: flex;
     justify-content: flex-end;
     padding: 10px 40px 10px 0;
-    border-right: 4px solid $greyUI;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      border-right: 4px solid $greyUI;
+    }
     &.active {
       border-color: $hover;
+      display: block;
       a {
         text-decoration: none;
         background: #ef8080;
@@ -228,12 +243,21 @@ a {
     }
   }
   a {
-    font-size: 42px;
-    line-height: 49.5px;
+    font-size: 14px;
+    line-height: 16.5px;
     color: $greyText;
     display: block;
     width: 100%;
-    text-align: right;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    @include media-breakpoint-up(lg) {
+      display: block;
+      font-size: 42px;
+      line-height: 49.5px;
+      text-transform: none;
+      text-align: right;
+    }
     &:hover {
       text-decoration: none;
       background: #ef8080;
@@ -244,22 +268,145 @@ a {
       -webkit-text-fill-color: transparent;
     }
   }
+  .active {
+    display: block;
+  }
 }
 .infoContent {
-  padding: 0 0 0 40px;
   height: 310px;
   display: flex;
-  justify-content: center;
+
   flex-direction: column;
   color: $white;
+  @include media-breakpoint-up(lg) {
+    padding: 0 0 0 40px;
+    justify-content: center;
+  }
   .ttl {
-    font-size: 32px;
-    line-height: 37.77px;
+    font-size: 22px;
+    line-height: 26px;
     font-weight: 400;
     margin-bottom: 20px;
     display: block;
+    @include media-breakpoint-up(lg) {
+      font-size: 32px;
+      line-height: 37.77px;
+    }
   }
   p {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-lg;
+      line-height: $line-height-lg;
+    }
+  }
+}
+ul.paging {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    span {
+      cursor: pointer;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin: 0 7px;
+      background: rgba(36, 163, 255, 0.2);
+    }
+    &.active {
+      span {
+        background: $link-color;
+      }
+    }
+  }
+}
+
+.sectionLinkWrapper {
+  a {
+    font-size: 14px;
+    line-height: 16.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+}
+.benefitsHeader {
+  h1 {
+    margin-bottom: 68px;
+  }
+}
+.benefits,
+  .shopping,
+  .keys,
+  .crowdfunding,
+  .hand-together,
+  .shield,
+  .lawyer {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    background: $white;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  h2 {
     font-size: $font-size-lg;
+    line-height: $line-height-lg;
+    color: $linkColor;
+    margin-bottom: 15px;
+  }
+  p {
+    color: $white;
+    padding-bottom: 60px;
+  }
+}
+.shopping,
+.keys,
+.crowdfunding,
+.hand-together,
+.shield,
+.lawyer {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background: url(../images/svg/shopping-purse.svg);
+    width: 64px;
+    height: 64px;
+    top: 14px;
+    right: 13px;
+  }
+}
+.keys {
+  &::before {
+    background: url(../images/svg/keys.svg);
+  }
+}
+.crowdfunding {
+  &::before {
+    background: url(../images/svg/crowdfunding.svg);
+  }
+}
+.hand-together {
+  &::before {
+    background: url(../images/svg/hand-together.svg);
+  }
+}
+.shield {
+  &::before {
+    background: url(../images/svg/shield.svg);
+  }
+}
+.lawyer {
+  &::before {
+    background: url(../images/svg/lawyer.svg) no-repeat;
+    top: 19px;
+    right: 3px;
   }
 }
