@@ -191,7 +191,7 @@ h1 {
   padding-top: 80px;
   border-radius: 0px 0px 12px 12px;
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
   &:before {
     position: absolute;
     bottom: -10px;
@@ -427,4 +427,128 @@ ul.paging {
   font-size: 18px;
   line-height: 21px;
   color: #b3b3ba;
+}
+
+// .topKeys
+.topKeys {
+  height: 255px;
+  background: #f5f5fa;
+}
+.topKeys-inner {
+  border: 1px solid $white;
+  color: #686887;
+  font-size: 24px;
+  line-height: 28px;
+
+  span {
+    color: #b3b3ba;
+    font-size: 18px;
+    margin-top: 10px;
+    display: block;
+  }
+}
+.topKeys-info {
+  padding-top: 60px;
+}
+.topKeys-title {
+  border-bottom: 1px solid $white;
+  color: $hover;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.topKeys-costom {
+  padding-top: 40px;
+}
+.topKeys-inner-down {
+  height: 198px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.topKeys-inner-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.topKeys-info-pad {
+  padding-left: 10px;
+}
+.trust {
+  font-size: 14px;
+  line-height: 17px;
+  color: #323264;
+  font-weight: 700;
+  padding: 30px 0;
+}
+.clients-inner {
+  img {
+    width: 100%;
+    background-size: auto;
+  }
+}
+// public start
+.public-costom {
+  background: $greyUI;
+}
+.public {
+  padding-top: 30px;
+}
+.card-inner {
+  a {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  p {
+    padding-top: 20px;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+  }
+}
+.card-date {
+  font-size: 12px;
+  line-height: 14px;
+  color: $greyText;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid $greyUI;
+}
+// public end
+
+// footer start
+.public-costom {
+  padding-top: 20px;
+}
+.footer-adress {
+  margin-top: 6px;
+}
+.footer-inner {
+  padding-top: 30px;
+  display: flex;
+}
+.footer-wrapper {
+  flex-direction: column;
+  border-top: 4px solid $greyText;
+  a {
+    margin-top: 13px;
+    margin-left: 30px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
+.hoobabooba {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $greyText;
+  text-align: right;
+}
+.phone {
+  font-weight: 700;
+  padding-left: 10px;
 }
