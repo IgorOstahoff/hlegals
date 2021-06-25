@@ -1,73 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto&display=swap");
-@font-face {
-  font-family: "ttnorms-bold";
-  src: url("../fonts/TTNorms-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto&display=swap");
+// @font-face {
+//   font-family: "ttnorms-bold";
+//   src: url("../fonts/TTNorms-Bold.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: "ttnorms-medium";
-  src: url("../fonts/TTNorms-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "ttnorms-medium";
+//   src: url("../fonts/TTNorms-Medium.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: "ttnorms";
-  src: url("../fonts/TTNorms-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "ttnorms";
+//   src: url("../fonts/TTNorms-Regular.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-body {
-  padding-top: 20px;
-  &:before {
-    z-index: 10001;
-    line-height: 20px;
-    font-weight: 700;
-    text-align: center;
-    position: fixed;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: limegreen;
-    content: "Xsmall";
-  }
-  @include media-breakpoint-up(sm) {
-    &:before {
-      content: "small";
-      background: #f00;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    font-size: $font-size-base;
-    &:before {
-      content: "middle";
-      background: green;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    &:before {
-      content: "Large";
-      background: turquoise;
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    &:before {
-      content: "XLarge";
-      background: #f09;
-    }
-  }
-  @include media-breakpoint-up(xxl) {
-    &:before {
-      content: "XXLarge";
-      background: #90f;
-    }
-  }
-}
+// body {
+//   padding-top: 20px;
+//   &:before {
+//     z-index: 10001;
+//     line-height: 20px;
+//     font-weight: 700;
+//     text-align: center;
+//     position: fixed;
+//     font-size: 20px;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 20px;
+//     background: limegreen;
+//     content: "Xsmall";
+//   }
+//   @include media-breakpoint-up(sm) {
+//     &:before {
+//       content: "small";
+//       background: #f00;
+//     }
+//   }
+//   @include media-breakpoint-up(md) {
+//     font-size: $font-size-base;
+//     &:before {
+//       content: "middle";
+//       background: green;
+//     }
+//   }
+//   @include media-breakpoint-up(lg) {
+//     &:before {
+//       content: "Large";
+//       background: turquoise;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//     &:before {
+//       content: "XLarge";
+//       background: #f09;
+//     }
+//   }
+//   @include media-breakpoint-up(xxl) {
+//     &:before {
+//       content: "XXLarge";
+//       background: #90f;
+//     }
+//   }
+// }
 a {
   text-decoration: none;
 }
@@ -510,6 +510,8 @@ ul.paging {
   padding-top: 10px;
   padding-bottom: 20px;
   border-bottom: 4px solid $greyUI;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 // public end
 
@@ -579,4 +581,71 @@ ul.paging {
   font-size: 14px;
   line-height: 17px;
   border-radius: 20px;
+}
+//  third page
+.img-entry {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.publicEntry {
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    color: #323264;
+    padding: 30px 0 0 10px;
+  }
+  h3 {
+    color: #323264;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    padding-top: 10px;
+  }
+  span {
+    font-size: 12px;
+    line-height: 22px;
+    color: #b3b3ba;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 4px solid $greyUI;
+    display: block;
+    padding: 0 0 30px 10px;
+  }
+  p {
+    padding: 30px 0 30px 10px;
+  }
+}
+.cnil-list {
+  display: flex;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 10px 10px;
+  strong {
+    color: $hover;
+    padding-right: 10px;
+  }
+}
+.comercial-text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #b3b3ba;
+  text-align: center;
+}
+.p-line {
+  border-bottom: 4px solid $greyUI;
+}
+.social-inner {
+  display: flex;
+  padding-bottom: 50px;
+}
+.social {
+  margin-right: 10px;
+  padding: 7px 9px;
+  height: 42px;
+  width: 42px;
+  background: $greyUI;
+  border-radius: 12px;
 }
